@@ -1,0 +1,11 @@
+pandas==2.2.2
+numpy==2.0.0rc2
+matplotlib==3.9.0
+seaborn==0.13.2
+os==2.1.4
+warnings==3.12.3
+ultralytics==8.2.28
+opencv-python==4.10.0.82
+pillow==10.3.0
+yaml==6.0.1
+random==1.0.2
