@@ -7,27 +7,15 @@ Original file is located at
     https://colab.research.google.com/drive/1a4-798FkIjjpwkiWheL7RhUbGL8Smwx3
 """
 
-import matplotlib.pyplot as plt
 import cv2
-import os
 import numpy as np
-
-!pip install ultralytics
-
 from ultralytics import YOLO
 from shapely.geometry import Polygon
 
-model = YOLO('yolov8n-seg.pt')
 bestModelpath = '/content/best.pt'
 bestModel = YOLO(bestModelpath)
 
-imagePath = '/content/depositphotos_209849422-stock-photo-man-pulls-lower-eyelid-survey.jpg'
-
-#fig, ax = plt.subplots(1, 1, figsize=(10, 10))
-#fig.suptitle('Testing from User')
-
-# Ensure the image exists at the given path
-#assert os.path.exists(imagePath), f"Image not found at {imagePath}"
+imagePath = '/content/depositphotos_209849422-stock-photo-man-pulls-lower-eyelid-survey.jpg' # Input the correct path
 
 # Predict and plot
 results = bestModel.predict(source=imagePath)
@@ -55,20 +43,3 @@ for mask in masks:
 
   # Display the result
   cv2.imwrite('crop_mask.jpg',cropped_image)
-  cv2.imshow('Cropped Image', cropped_image)
-  cv2.waitKey(0)
-  cv2.destroyAllWindows()
-
-#annotatedImage = results[0].plot()
-#annotatedImageRGB = cv2.cvtColor(annotatedImage, cv2.COLOR_BGR2RGB)
-
-# Debugging: Print the results to check what is returned
-# print(results)
-
-# Display the image
-#ax.imshow(annotatedImageRGB)
-#ax.axis('off')
-
-#plt.tight_layout()
-#plt.show()
-
