@@ -27,6 +27,9 @@ Data engineering is a critical step in developing robust machine learning models
 
 - Model Architecture: YOLOv8 (You Only Look Once version 8)
 - Dataset: 333 images from RoboFlow
+- Performance:
+    - Box mAP50: 0.938
+    - Mask mAP50: 0.988     
 - Output: Segmented images highlighting the conjunctiva region
 - File Format: PyTorch model (.pt)
 
