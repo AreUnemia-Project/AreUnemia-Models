@@ -4,10 +4,11 @@ Welcome to the AreUnemia application repository. This repository contains the ma
 
 ## Table of Contents
 
-1. Data Engineering
-2. Models
-3. Results
-4. Acknowledgements
+1. [Data Engineering](#data-engineering)
+2. [Models](#models)
+3. [Results](#results)
+4. [Usage](#usage)
+5. [Acknowledgements](#acknowledgements)
 
 ## Data Engineering
 
@@ -56,6 +57,23 @@ Data engineering is a critical step in developing robust machine learning models
 ## Results
 - Conjunctiva Segmentation Model: The YOLOv8-based segmentation model accurately identifies and crops the conjunctiva region from input images.
 - Anemia Prediction Model: The CNN classification model achieves a high accuracy of 0.99 on the training set and 0.98 on the validation set, providing reliable predictions on anemia status.
+
+## Usage
+To use the models, follow these steps:
+1. Clone the Repository:
+```
+git clone https://github.com/AreUnemia-Project/AreUnemia-BackendMLModels.git
+git cd AreUnemia-BackendMLModels
+```
+2. Install Dependencies:
+Ensure you have the required libraries installed. You can use the requirements.txt file to install dependencies.
+```
+pip install -r requirements.txt
+```
+
+3. Load and run the models
+- Image Segmentation : Run the testing_imagesegmentation_v1_1.py in the local
+- Image Classification : Upload the testing_imageclassidication.ipynb to Google Colab and Run All
 
 ## Acknowledgements
 We would like to thank the contributors of the datasets used in this project:
